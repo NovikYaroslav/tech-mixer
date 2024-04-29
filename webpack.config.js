@@ -57,7 +57,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    port: 3003,
+    port: 3001,
     hot: true,
   },
   mode: production ? 'production' : 'development',
