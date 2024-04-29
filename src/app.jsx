@@ -1,3 +1,5 @@
+import styles from './styles.scss';
+
 export default function App() {
-  return <p>Hellow React App!</p>;
+  return <div className={styles.label}>Create your React App</div>;
 }

@@ -7,9 +7,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const production = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  entry: { myAppName: path.resolve(__dirname, './src/index.js') },
+  entry: { myApp: path.resolve(__dirname, './src/index.js') },
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './build'),
     filename: production ? '[name].[contenthash].js' : '[name].js',
   },
   module: {
@@ -42,7 +42,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.scss'],
+    extensions: ['.*', '.js', '.jsx', '.scss'],
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -57,7 +57,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    port: 3001,
+    port: 3003,
     hot: true,
   },
   mode: production ? 'production' : 'development',
